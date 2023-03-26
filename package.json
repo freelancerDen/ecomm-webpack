@@ -5,7 +5,8 @@
   "main": "index.js",
   "proxy": "http://localhost:3000",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "prod": "webpack --config webpack.prod.js",
+    "dev": "webpack --config webpack.dev.js",
     "server": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,13 +17,20 @@
     "css-minimizer-webpack-plugin": "^4.2.2",
     "express": "^4.18.2",
     "html-webpack-plugin": "^5.5.0",
+    "image-minimizer-webpack-plugin": "^3.8.2",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
     "mini-css-extract-plugin": "^2.7.5",
     "sass": "^1.58.3",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-middleware": "^6.0.1"
+    "webpack-dev-middleware": "^6.0.1",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "file-loader": "^6.2.0",

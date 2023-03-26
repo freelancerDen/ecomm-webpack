@@ -8,13 +8,12 @@ const addProductCard = async (url, wrapper) => {
 };
 
 const createCard = (id, imageUrl, title, price) => {
-  console.log("count$");
   const prodWrapper = document.createElement("div");
   prodWrapper.setAttribute("id", id);
   prodWrapper.classList.add("product-wrapper");
   prodWrapper.innerHTML = `
       <div class="product__image">
-        <div class="product__image_container style="background: url('${url}')"></div>
+        <div class="product__image_container" style="background-image: url('${imageUrl}')"></div>
         <button class="product__add-to-favorite" onclick="addToFavorite(${id})"></button>
       </div>
       <div class="product__description">

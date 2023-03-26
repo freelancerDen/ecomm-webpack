@@ -5,7 +5,7 @@ const fs = require('fs');
 
 
 const app = express();
-const config = require('./webpack.config.js');
+const config = require('./webpack.dev.js');
 const compiler = webpack(config);
 
 // Tell express to use the webpack-dev-middleware and use the webpack.config.js
@@ -32,6 +32,11 @@ app.get('/data', (req, res) => {
 });
 
 // Serve the files on port 3000.
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000! http://localhost:3000\n');
+app.listen(3000, function (err) {
+  try{
+    console.log('Example app listening on port 3000! http://localhost:3000\n');
+  }
+  catch {
+    console.log(err.message);
+  }
 });
