@@ -1,0 +1,45 @@
+.container {
+  @include container;
+  &__form-wrapper {
+    width: 100%;
+    height: 48px;
+  }
+}
+.radio-btns {
+
+  // .radio-btns__wrapper
+
+  &__wrapper {
+    display: flex;
+  }
+}
+.radio-btn {
+
+  // .radio-btn__wrapper
+
+  &__wrapper {
+    position: relative;
+    padding: 12px 32px;
+    background: $filter-bg-disable;
+    border-radius: 34px;
+    border: 1px solid;
+    border-color: $filter-border;
+    margin-right: 17px;
+    input[type="radio"] {
+      position: absolute;
+      width: -webkit-fill-available;
+      height: -webkit-fill-available;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    &.checked {
+      background: $filter-bg-active;
+    }
+    .checked {
+      color: $text-white;
+    }
+  }
+
+
+}

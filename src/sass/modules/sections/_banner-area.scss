@@ -1,0 +1,50 @@
+//banner area
+.container {
+  @include container;
+  &__wrapper__banner {
+    @include border-radius;
+    margin: 0px 0;
+    .banner {
+      &__block {
+        display: flex;
+      }
+      &__image-bg {
+        background-image: url('../image/banner_bg_desktop.jpg');
+        background-position: left;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+      }
+      &__content-wrapper {
+        color: $text-white;
+        margin: 32px 115px 0 32px;
+        min-width: 186px;
+        max-width: 581px;
+        .baner-image-logo {
+          width: 129px;
+          height: 49px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-image: url('../image/logo_banner_white.svg');
+        }
+        &__title {
+          margin: 9px 0 8px 0;
+        }
+        &__text {
+          margin: 0;
+          font-weight: 500;
+        }
+      }
+      &__image {
+        background-image: url('../image/banner_room-air-conditioner.png');
+        margin: 26px auto;
+        width: 409px;
+        height: 208px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+  }
+
+}

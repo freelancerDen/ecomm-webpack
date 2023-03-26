@@ -1,0 +1,38 @@
+h1 {
+    @include font-bold;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+
+  }
+h2 {
+  @include font-bold;
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
+}
+h6 {
+  @include font-medium;
+  margin: 0;
+  padding: 0;
+}
+p {
+  @include font-medium;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  display: inline-block;
+  line-height: 1.5em;
+  font-size: 1em;
+  @include font-medium;
+  &_small {
+    line-height: 1.25em;
+    font-size: 0.875em;
+  }
+}
+

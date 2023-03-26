@@ -1,0 +1,40 @@
+//main file add your style here
+@import 'modules/normalize';
+@import 'modules/variables/global';
+@import 'modules/mixins//global';
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $body-color;
+  color: $body-text;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+@import 'modules/font-settings';
+
+header{
+  width: 100%;
+  background: #fff;
+}
+
+section {
+  width: 100%;
+  margin: 32px 0;
+}
+
+footer {
+  width: 100%;
+  background: #fff;
+  margin-top: auto;
+}
+
+
+@import 'modules/sections/header';
+@import 'modules/sections/banner-area';
+@import 'modules/sections/product-section';
+@import 'modules/sections/footer';
+
+

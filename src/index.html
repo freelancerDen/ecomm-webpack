@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ecommerce-site</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- font Montserrat -->
+  <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <link rel="stylesheet" href="main.css"> -->
+  <!-- Place favicon.ico in the root directory -->
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="container__wrapper__nav">
+        <div class="container__wrapper__blocks">
+
+          <div class="left-block">
+            <div class="logo-wrapper">
+              <a href="/">
+                <span class="logo"></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="middle-block">
+
+            <div class="middle-block__dropdown-wrapper">
+              <div class="dropdown">
+                <button class="dropbtn">Каталог</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="middle-block__search-wrapper">
+              <form method="GET">
+                <input class="nav-search" type="search" placeholder="Поиск" name="search" id="nav_search">
+              </form>
+            </div>
+          </div>
+
+          <div class="right-block">
+            <div class="right-block__cart-wrapper">
+              <div class="icon-cart">
+                <span class="cart-counter"></span>
+              </div>
+              <div class="text text_small">
+                Корзина
+              </div>
+            </div>
+            <div class="right-block__favorite-wrapper">
+              <div class="icon-favorite">
+              </div>
+              <div class="text text_small">
+                Избранное
+              </div>
+            </div>
+            <div class="right-block__lang-wrapper">
+              <div class="dropdown__lang-menu">
+                <button class="dropdown__lang-menu__dropbtn text_small">Рус</button>
+                <div class="dropdown__lang-menu__content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+    <!-- mobile layout -->
+    <!-- <div class="container__mobile hidden">
+      <div class="container__wrapper_mobile">
+        <div class="left-block__mobile">
+          <div class="logo">
+            <img src="#" alt="logo">
+          </div>
+        </div>
+        <div class="right-block">
+          <div class="right-block__mobile__search-input">
+            <form method="get">
+              <input class="nav-search__mobile" type="search" name="search" id="navSearch">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </header>
+  <main>
+    <!-- banner section -->
+    <section>
+      <div class="container">
+        <div class="container__wrapper__banner">
+          <div class="banner__block banner__image-bg">
+            <div class="banner__content-wrapper">
+              <span class="baner-image-logo"></span>
+              <h1 class="banner__content-wrapper__title white-text">
+                Страница официального представителя Midea в Узбекистане
+              </h1>
+              <p class="banner__content-wrapper__text">
+                По всем вопросам обращайтесь к нашим специалистам
+              </p>
+            </div>
+            <div class="banner__image"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+   <!-- products section -->
+    <section>
+      <div class="container">
+            <div class="container__form-wrapper">
+              <form id="filter-products">
+                <div class="radio-btns__wrapper">
+                  <div class="radio-btn__wrapper">
+                    <input type="radio" id="filterAll" name="filter" value="all" checked>
+                    <label for="contactChoice1">Все товары</label>
+                  </div>
+                  <div class="radio-btn__wrapper">
+                    <input type="radio" id="filterInStock" name="filter" value="instock">
+                    <label for="contactChoice2">Товары в наличии</label>
+                  </div>
+                  <div class="radio-btn__wrapper">
+                    <input type="radio" id="filterHot" name="filter" value="hot">
+                    <label for="contactChoice3">Горячие товары</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+      </div>
+    </section>
+    <!-- product cards section -->
+    <section>
+      <div class="container">
+        <div class="container__wrapper">
+          <div class="grid-wrapper">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="container__showmore-wrapper">
+          <div class="showmore-wrapper__btn-wrapper">
+            <button>Показать ещё 20</button>
+          </div>
+      </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="gird__container">
+          <div class="gird__container_col-1">
+            <div class="col-wrapper">
+              <span class="logo"></span>
+              <p>Страница официального представителя Midea в Узбекистане</p>
+            </div>
+          </div>
+          <div class="gird__container_col-2">
+            <div class="col__wrapper">
+              <h6 class="col__title">
+                Адрес
+              </h6>
+              <div class="row__content">
+                  <p class="row__text">
+                    <a href="#">15 Амир Темур шоҳ кўчаси, Tashkent 100000</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="gird__container_col-3">
+            <h6 class="col__title">
+              Номер телефона
+            </h6>
+            <div class="row__content">
+              <p class="col__text">
+                <a href="tel:#">+38(000) 111-22-33</a>
+              </p>
+            </div>
+          </div>
+          <div class="gird__container_col-4">
+            <div class="icon-btn__wrapper">
+              <a href="#">
+                <span class="icon-btn__instagram"></span>
+              </a>
+              <a href="#">
+                <span class="icon-btn__telegram"></span>
+              </a>
+              <a href="#">
+                <span class="icon-btn__youtube"></span>
+              </a>
+              <a href="#">
+                <span class="icon-btn__facebook"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
