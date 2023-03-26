@@ -47,6 +47,25 @@
           padding: 12px 18px;
           @include border-radius;
           @include w100;
+          &-active {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $dropdown-btn;
+            color: $text-white;
+            padding: 12px 18px;
+            @include border-radius;
+            @include w100;
+            &::before{
+              content: '';
+            background-image: url('../image/icon_menu_nav_close.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            }
+          }
           &::before {
             content: '';
             background-image: url('../image/icon_menu_nav.svg');
