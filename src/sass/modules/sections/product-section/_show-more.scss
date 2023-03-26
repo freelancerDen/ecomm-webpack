@@ -1,0 +1,26 @@
+.container {
+
+  // .container__showmore-wrapper
+
+  &__showmore-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+.showmore-wrapper {
+
+  // .showmore-wrapper__btn-wrapper
+
+  &__btn-wrapper {
+    button {
+      color: $show-more-text;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 14px;
+      &:hover {
+        color: #fff;
+        background-color: $blue; 
+      }
+    }
+  }
+}

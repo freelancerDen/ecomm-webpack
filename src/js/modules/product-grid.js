@@ -14,7 +14,7 @@ const createCard = (id, imageUrl, title, price) => {
   prodWrapper.innerHTML = `
       <div class="product__image">
         <div class="product__image_container" style="background-image: url('${imageUrl}')"></div>
-        <button class="product__add-to-favorite" onclick="addToFavorite(${id})"></button>
+        <button class="product__add-to-favorite"></button>
       </div>
       <div class="product__description">
         <h3 class="title">
@@ -22,7 +22,7 @@ const createCard = (id, imageUrl, title, price) => {
         </h3>
         <div class="product__cart-block">
           <p class="product__cart-block__price">${price} $</p>
-          <button class="product__cart-block__add-to-cart" onclick="addToCart(${id})"></button>
+          <button class="product__cart-block__add-to-cart"></button>
         </div>
       </div>
     `;

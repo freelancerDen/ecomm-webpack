@@ -11,6 +11,8 @@
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    margin: 32px 0;
+    column-gap: 24px;
     &_col-1 {
       grid-area: 1 / 1 / 2 / 2;
       .col-wrapper {
