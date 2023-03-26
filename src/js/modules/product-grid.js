@@ -1,10 +1,30 @@
-const addProductCard = async (url, wrapper) => {
+const addProductCard = async (...args) => {
+  const [url, wrapper, filter] = args;
+
   let { data } = await axios(url);
-  data.products.forEach((item) => {
-    wrapper.appendChild(
-      createCard(item.id, item.imgUrl, item.title, item.price)
-    );
-  });
+  if (filter === "instock") {
+    data.products.filter((item) => {
+      if (item.avaliable) {
+        wrapper.appendChild(
+          createCard(item.id, item.imgUrl, item.title, item.price)
+        );
+      }
+    });
+  } else if (filter === "hot") {
+    data.products.filter((item) => {
+      if (item.hot) {
+        wrapper.appendChild(
+          createCard(item.id, item.imgUrl, item.title, item.price)
+        );
+      }
+    });
+  } else {
+    data.products.forEach((item) => {
+      wrapper.appendChild(
+        createCard(item.id, item.imgUrl, item.title, item.price)
+      );
+    });
+  }
 };
 
 const createCard = (id, imageUrl, title, price) => {

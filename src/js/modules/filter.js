@@ -1,7 +1,8 @@
+import addProductCard from "./product-grid";
 const radioBtn = document.querySelectorAll('input[type="radio"]');
 
-function checkRadio () {
-  radioBtn.forEach( item => {
+const checkRadio = (e, url, wrapper) => {
+  radioBtn.forEach((item) => {
     if (item.checked) {
       item.parentElement.classList.add('checked');
       item.nextElementSibling.classList.add('checked');
@@ -9,8 +10,18 @@ function checkRadio () {
       item.parentElement.classList.remove('checked');
       item.nextElementSibling.classList.remove('checked');
     }
-    item.addEventListener('click', checkRadio);
   });
+  
+  if (e.target.value === 'hot') {
+    wrapper.innerHTML = '';
+    addProductCard(url, wrapper, e.target.value);
+  } else if (e.target.value === 'instock') {
+    wrapper.innerHTML = '';
+    addProductCard(url, wrapper, e.target.value);
+  } else {
+    wrapper.innerHTML = '';
+    addProductCard(url, wrapper);
+  }
 }
 
 export default checkRadio;

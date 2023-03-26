@@ -138,7 +138,8 @@
     "sku": "sdf23232",
     "avaliable": true,
     "shareUrl": "id",
-    "favorite": false
+    "favorite": false,
+    "hot": true
   },
   {
     "id": "piuiyh",
@@ -150,9 +151,10 @@
     "price": "275000",
     "quantity": "10",
     "sku": "sdf23232",
-    "avaliable": true,
+    "avaliable": false,
     "shareUrl": "id",
-    "favorite": false
+    "favorite": false,
+    "hot": true
   },
   {
     "id": "23rtg",
@@ -164,9 +166,10 @@
     "price": "275000",
     "quantity": "10",
     "sku": "sdf23232",
-    "avaliable": true,
+    "avaliable": false,
     "shareUrl": "id",
-    "favorite": false
+    "favorite": false,
+    "hot": true
   }
  ]
 }
